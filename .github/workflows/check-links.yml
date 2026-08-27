@@ -1,0 +1,61 @@
+name: Check project links
+
+on:
+  schedule:
+    - cron: '0 13 * * 1'  # every Monday, 13:00 UTC
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'projects.json'
+      - 'scripts/check-links.mjs'
+      - '.github/workflows/check-links.yml'
+
+permissions:
+  issues: write
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run link checker
+        id: check
+        run: |
+          set +e
+          node scripts/check-links.mjs > link-report.txt 2>&1
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          cat link-report.txt
+
+      - name: Open or update issue on failure
+        if: steps.check.outputs.exit_code != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing=$(gh issue list --search "Broken project links in:title" --state open --json number --jq '.[0].number')
+          body="Automated link check found broken links. See the run for details: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
+
+          \`\`\`
+          $(cat link-report.txt)
+          \`\`\`"
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh issue create --title "Broken project links" --body "$body" --label "bug"
+          fi
+
+      - name: Close stale issue on success
+        if: steps.check.outputs.exit_code == '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing=$(gh issue list --search "Broken project links in:title" --state open --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "All links are healthy again as of this run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            gh issue close "$existing"
+          fi
