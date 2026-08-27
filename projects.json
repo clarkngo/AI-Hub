@@ -125,6 +125,36 @@
           "tags": ["education"]
         }
       ]
+    },
+    {
+      "id": "evaluation-safety",
+      "title": "Evaluation & Safety",
+      "projects": [
+        {
+          "title": "AI Benchmarks",
+          "url": "https://clarkngo.github.io/ai-benchmarks/",
+          "description": "A practical catalog of eval patterns for LLM systems — exact-match checks, LLM-as-judge scoring, statistical significance, and a runnable rubric-scoring harness to fork.",
+          "accent": "#475569",
+          "icon": "<line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"10\"/><line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"4\"/><line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"14\"/>",
+          "tags": ["evals", "testing", "benchmarking"]
+        },
+        {
+          "title": "Context Engineering",
+          "url": "https://clarkngo.github.io/context-engineering/",
+          "description": "A working reference for managing the context window as a finite budget — retrieval, memory, caching, and the anti-patterns that quietly break long-running agents.",
+          "accent": "#1e3a8a",
+          "icon": "<polygon points=\"12 2 2 7 12 12 22 7 12 2\"/><polyline points=\"2 17 12 22 22 17\"/><polyline points=\"2 12 12 17 22 12\"/>",
+          "tags": ["context-engineering", "agents", "rag"]
+        },
+        {
+          "title": "AI Red Team",
+          "url": "https://clarkngo.github.io/ai-redteam/",
+          "description": "A defensive catalog of LLM and agent security risks mapped to the OWASP LLM Top 10 — every threat ships with a concrete mitigation checklist, no exploit code.",
+          "accent": "#7f1d1d",
+          "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/>",
+          "tags": ["security", "red-team", "prompt-injection"]
+        }
+      ]
     }
   ]
 }
