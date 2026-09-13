@@ -153,6 +153,14 @@
           "accent": "#7f1d1d",
           "icon": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/>",
           "tags": ["security", "red-team", "prompt-injection"]
+        },
+        {
+          "title": "ScriptedAI",
+          "url": "https://clarkngo.github.io/scripted-ai/",
+          "description": "Cinematic anchors for AI/ML safety engineering — ten recognizable film scenes, each grounded in a documented incident, the NIST AI RMF, OWASP LLM Top 10, and a reproducible runbook.",
+          "accent": "#92400e",
+          "icon": "<rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"2.18\"/><line x1=\"7\" y1=\"2\" x2=\"7\" y2=\"22\"/><line x1=\"17\" y1=\"2\" x2=\"17\" y2=\"22\"/><line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\"/><line x1=\"2\" y1=\"7\" x2=\"7\" y2=\"7\"/><line x1=\"2\" y1=\"17\" x2=\"7\" y2=\"17\"/><line x1=\"17\" y1=\"17\" x2=\"22\" y2=\"17\"/><line x1=\"17\" y1=\"7\" x2=\"22\" y2=\"7\"/>",
+          "tags": ["ai-safety", "case-studies", "nist", "owasp"]
         }
       ]
     }
