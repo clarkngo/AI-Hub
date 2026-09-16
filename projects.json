@@ -169,6 +169,14 @@
           "accent": "#92400e",
           "icon": "<rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"2.18\"/><line x1=\"7\" y1=\"2\" x2=\"7\" y2=\"22\"/><line x1=\"17\" y1=\"2\" x2=\"17\" y2=\"22\"/><line x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\"/><line x1=\"2\" y1=\"7\" x2=\"7\" y2=\"7\"/><line x1=\"2\" y1=\"17\" x2=\"7\" y2=\"17\"/><line x1=\"17\" y1=\"17\" x2=\"22\" y2=\"17\"/><line x1=\"17\" y1=\"7\" x2=\"22\" y2=\"7\"/>",
           "tags": ["ai-safety", "case-studies", "nist", "owasp"]
+        },
+        {
+          "title": "Governed Intent-Driven Data Pipeline",
+          "url": "https://clarkngo.github.io/governed-intent-data-pipeline/",
+          "description": "Natural-language intent compiled into a governed execution plan — defense-in-depth guardrails, least-privilege identity, and full audit/lineage, running entirely in-browser against DuckDB-Wasm.",
+          "accent": "#134e4a",
+          "icon": "<ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"/><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"/>",
+          "tags": ["data-governance", "guardrails", "duckdb", "hitl"]
         }
       ]
     }
