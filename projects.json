@@ -133,6 +133,15 @@
           "tags": ["research", "papers"]
         },
         {
+          "title": "Thought Journal",
+          "url": "https://clarkngo.github.io/blogs/#/?tag=AI",
+          "description": "Essays on AI — autonomy, alignment, hiring, and the classroom — from the Thought Journal, already filtered to the AI tag.",
+          "accent": "#4338ca",
+          "icon": "<path d=\"M12 20h9\"/><path d=\"M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z\"/>",
+          "linkText": "Read AI essays",
+          "tags": ["essays", "writing", "education"]
+        },
+        {
           "title": "AI Educator Showcase",
           "url": "https://clarkngo.github.io/ai-educator-showcase/",
           "description": "A curated flip-card tour of my sites and tools, framed for educators exploring what's possible with AI.",
