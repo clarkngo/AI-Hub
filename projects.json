@@ -76,6 +76,15 @@
           "accent": "#ca8a04",
           "icon": "<path d=\"M9 3h6M10 3v6.5L4.5 19a1 1 0 00.87 1.5h13.26a1 1 0 00.87-1.5L14 9.5V3\"/>",
           "tags": ["training", "simulator", "google-cloud", "agent-studio"]
+        },
+        {
+          "title": "AI Courses",
+          "url": "https://clarkngo.github.io/courses/?filter=ai",
+          "description": "Practical short courses on AI — LLMs, agents, physical AI, and public safety — built for complete beginners and taught through real-world projects.",
+          "accent": "#0284c7",
+          "icon": "<path d=\"M22 10L12 5 2 10l10 5 10-5z\"/><path d=\"M6 12v5c3 3 9 3 12 0v-5\"/><path d=\"M22 10v6\"/>",
+          "linkText": "Browse AI courses",
+          "tags": ["education", "courses", "training"]
         }
       ]
     },
