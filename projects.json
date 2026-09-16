@@ -68,6 +68,14 @@
           "accent": "#b91c1c",
           "icon": "<path d=\"M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z\"/><path d=\"M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z\"/>",
           "tags": ["recipes", "workflows", "prompt-engineering"]
+        },
+        {
+          "title": "SkillSandbox",
+          "url": "https://clarkngo.github.io/skill-sandbox/",
+          "description": "An offline simulator for Google Cloud's GSP1154 lab (Prototyping Generative AI for Insurance in Agent Studio) — work through the tasks at zero API cost before running them for real.",
+          "accent": "#ca8a04",
+          "icon": "<path d=\"M9 3h6M10 3v6.5L4.5 19a1 1 0 00.87 1.5h13.26a1 1 0 00.87-1.5L14 9.5V3\"/>",
+          "tags": ["training", "simulator", "google-cloud", "agent-studio"]
         }
       ]
     },
