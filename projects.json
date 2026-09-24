@@ -149,6 +149,14 @@
           "icon": "<path d=\"M22 10L12 5 2 10l10 5 10-5z\"/><path d=\"M6 12v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5\"/>",
           "linkText": "View showcase",
           "tags": ["education"]
+        },
+        {
+          "title": "Problem Atlas",
+          "url": "https://clarkngo.github.io/problem-atlas/",
+          "description": "An interactive map from industry to role to task scenario, ending in a diagnosis of whether the fix is AI, process change, automation, or a requirements gap — starting with Higher Education.",
+          "accent": "#4d7c0f",
+          "icon": "<polygon points=\"1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6\"/><line x1=\"8\" y1=\"2\" x2=\"8\" y2=\"18\"/><line x1=\"16\" y1=\"6\" x2=\"16\" y2=\"22\"/>",
+          "tags": ["problem-framing", "decision-support", "higher-ed"]
         }
       ]
     },
