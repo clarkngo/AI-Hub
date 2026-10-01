@@ -85,6 +85,15 @@
           "icon": "<path d=\"M22 10L12 5 2 10l10 5 10-5z\"/><path d=\"M6 12v5c3 3 9 3 12 0v-5\"/><path d=\"M22 10v6\"/>",
           "linkText": "Browse AI courses",
           "tags": ["education", "courses", "training"]
+        },
+        {
+          "title": "Applied AI Field Guide",
+          "url": "https://clarkngo.github.io/applied-ai-field-guide/",
+          "description": "Judgment over prompts — real business and teaching tasks worked through a Use · Verify · Disclose · Decide rubric, for business students and educators.",
+          "accent": "#047857",
+          "icon": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><polygon points=\"16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76\"/>",
+          "linkText": "Open the field guide",
+          "tags": ["education", "business", "workflows"]
         }
       ]
     },
