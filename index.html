@@ -177,14 +177,104 @@
     padding: 0 1.5rem 5rem;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
+  [hidden] { display: none !important; }
+
+  .search {
+    position: sticky;
+    top: 1rem;
+    z-index: 10;
+    max-width: 36rem;
+    margin: -1.75rem auto 0;
   }
 
-  main > .grid:first-of-type {
-    margin-top: -2.5rem;
+  .search-field {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    height: 3.5rem;
+    padding: 0 0.75rem 0 1.1rem;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    box-shadow: var(--card-shadow);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .search-field:focus-within {
+    border-color: var(--focus-ring);
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  .search-field > svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    flex-shrink: 0;
+    color: var(--text-muted);
+  }
+
+  .search-input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-size: 1rem;
+  }
+
+  .search-input:focus { outline: none; }
+  .search-input::placeholder { color: var(--text-muted); }
+  .search-input::-webkit-search-cancel-button { display: none; }
+
+  .search-clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 999px;
+    background: var(--toggle-bg);
+    color: var(--text-muted);
+    cursor: pointer;
+  }
+
+  .search-clear:hover { background: var(--toggle-bg-hover); color: var(--text); }
+  .search-clear svg { width: 0.9rem; height: 0.9rem; }
+
+  .search-kbd {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .search-kbd kbd {
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--toggle-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.15rem 0.45rem;
+  }
+
+  .search-status {
+    min-height: 1.25rem;
+    margin: 0.6rem 0 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 640px), (hover: none) {
+    .search-kbd { display: none; }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
   }
 
   .section-title {
@@ -349,6 +439,15 @@
   </header>
 
   <main id="main">
+    <div class="search" role="search">
+      <label class="search-field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input id="search-input" class="search-input" type="search" aria-label="Search projects" placeholder="Search projects, tags…" autocomplete="off" spellcheck="false" aria-describedby="search-status" aria-keyshortcuts="/ Control+K Meta+K">
+        <button id="search-clear" class="search-clear" type="button" aria-label="Clear search" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        <span id="search-kbd" class="search-kbd" aria-hidden="true"><kbd>/</kbd></span>
+      </label>
+      <p id="search-status" class="search-status" aria-live="polite"></p>
+    </div>
     <div id="app"></div>
   </main>
 

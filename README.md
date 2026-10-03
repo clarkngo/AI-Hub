@@ -10,7 +10,13 @@ Live at: **https://clarkngo.github.io/AI-Hub/**
 
 - [`index.html`](index.html) — page shell: hero, theme toggle, SEO meta, `<main id="app">`.
 - [`projects.json`](projects.json) — every project card as data: title, url, description, accent color, icon, tags, section.
-- [`app.js`](app.js) — renders the cards from `projects.json` and generates the page's JSON-LD structured data from the same source, so SEO metadata can't drift out of sync with what's actually on the page.
+- [`app.js`](app.js) — renders the cards from `projects.json` and generates the page's JSON-LD structured data from the same source, so SEO metadata can't drift out of sync with what's actually on the page. It also powers the search bar, which filters cards by title, description, tags, and section.
+
+## Search
+
+Press <kbd>/</kbd> or <kbd>⌘K</kbd> / <kbd>Ctrl+K</kbd> anywhere to jump to search. Every word you type must match;
+<kbd>Enter</kbd> opens the top result, <kbd>↓</kbd> moves focus into the results, and <kbd>Esc</kbd> clears the
+query. The query is kept in the URL (`?q=agents`), so filtered views can be linked directly.
 - [`scripts/check-links.mjs`](scripts/check-links.mjs) — zero-dependency Node script that checks every project URL.
 - [`.github/workflows/check-links.yml`](.github/workflows/check-links.yml) — runs the checker weekly and on every push to `projects.json`, opening a GitHub issue if a link breaks and closing it once the link recovers.
 - `favicon.svg`, `og-image.svg` / `og-image.png`, `robots.txt`, `sitemap.xml` — sharing and search metadata.
